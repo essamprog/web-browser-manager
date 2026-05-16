@@ -6,7 +6,6 @@ BookmarksBST::BookmarksBST()
 {
     root = NULL;
 }
-
 BNode* BookmarksBST::insert(BNode* node, string url)
 {
     if (!node) return new BNode(url);
@@ -18,12 +17,10 @@ BNode* BookmarksBST::insert(BNode* node, string url)
 
     return node;
 }
-
 void BookmarksBST::insert(string url)
 {
     root = insert(root, url);
 }
-
 void BookmarksBST::inorder(BNode* node)
 {
     if (!node) return;
@@ -32,12 +29,10 @@ void BookmarksBST::inorder(BNode* node)
     cout << node->url << endl;
     inorder(node->right);
 }
-
 void BookmarksBST::display()
 {
     inorder(root);
 }
-
 bool BookmarksBST::search(BNode* node, string url)
 {
     if (!node) return false;
@@ -49,28 +44,23 @@ bool BookmarksBST::search(BNode* node, string url)
     else
         return search(node->right, url);
 }
-
 bool BookmarksBST::search(string url)
 {
     return search(root, url);
 }
-
 int BookmarksBST::count(BNode* node)
 {
     if (!node) return 0;
     return 1 + count(node->left) + count(node->right);
 }
-
 int BookmarksBST::count()
 {
     return count(root);
 }
-
 bool BookmarksBST::isEmpty()
 {
     return root == NULL;
 }
-
 void BookmarksBST::clear(BNode* node)
 {
     if (!node) return;
@@ -78,7 +68,6 @@ void BookmarksBST::clear(BNode* node)
     clear(node->right);
     delete node;
 }
-
 void BookmarksBST::clear()
 {
     clear(root);

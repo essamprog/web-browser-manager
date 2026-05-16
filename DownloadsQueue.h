@@ -1,11 +1,8 @@
 #ifndef DOWNLOADS_QUEUE_H
 #define DOWNLOADS_QUEUE_H
-
 #include <iostream>
 using namespace std;
-
 // 4 - Mohamed Ahmed
-
 struct QNode
 {
     string data;
@@ -17,7 +14,6 @@ struct QNode
         next = NULL;
     }
 };
-
 class DownloadsQueue
 {
 private:
@@ -32,5 +28,4 @@ public:
     void showDownloads();
     bool isEmpty();
 };
-
 #endif

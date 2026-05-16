@@ -1,11 +1,8 @@
 #ifndef BOOKMARKS_BST_H
 #define BOOKMARKS_BST_H
-
 #include <iostream>
 using namespace std;
-
 // Ahmed Fathi 2 - BST
-
 struct BNode
 {
     string url;
@@ -18,7 +15,6 @@ struct BNode
         left = right = NULL;
     }
 };
-
 class BookmarksBST
 {
 private:
@@ -39,5 +35,4 @@ public:
     bool isEmpty();
     void clear();
 };
-
 #endif

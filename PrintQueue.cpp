@@ -1,7 +1,5 @@
 #include "PrintQueue.h"
-
 // Mai Mahmoud 6 - Printer Queue
-
 PrintQueue::PrintQueue() {
     front = NULL;
     rear = NULL;
@@ -30,7 +28,6 @@ void PrintQueue::addJob(string doc) {
 bool PrintQueue::isEmpty() {
     return front == NULL;
 }
-
 void PrintQueue::printJob() {
     if (isEmpty()) {
         cout << "[!] No jobs to print." << endl;

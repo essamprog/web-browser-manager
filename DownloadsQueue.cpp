@@ -1,18 +1,14 @@
 #include "DownloadsQueue.h"
-
 // 4 - Mohamed Ahmed
-
 DownloadsQueue::DownloadsQueue()
 {
     front = rear = NULL;
 }
-
 DownloadsQueue::~DownloadsQueue()
 {
     while (!isEmpty())
         dequeue();
 }
-
 void DownloadsQueue::enqueue(string file)
 {
     QNode* node = new QNode(file);
@@ -26,7 +22,6 @@ void DownloadsQueue::enqueue(string file)
     rear->next = node;
     rear = node;
 }
-
 void DownloadsQueue::dequeue()
 {
     if (isEmpty()) return;
@@ -35,7 +30,6 @@ void DownloadsQueue::dequeue()
     front = front->next;
     delete temp;
 }
-
 void DownloadsQueue::showDownloads()
 {
     if (isEmpty())
@@ -43,7 +37,6 @@ void DownloadsQueue::showDownloads()
         cout << "No files in queue." << endl;
         return;
     }
-
     QNode* temp = front;
     int i = 1;
     while (temp)
@@ -53,7 +46,6 @@ void DownloadsQueue::showDownloads()
         i++;
     }
 }
-
 bool DownloadsQueue::isEmpty()
 {
     return front == NULL;

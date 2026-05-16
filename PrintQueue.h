@@ -3,9 +3,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
 // Mai Mahmoud 6 - Printer Queue
-
 struct PNode
 {
     string doc;
@@ -17,7 +15,6 @@ struct PNode
         next = NULL;
     }
 };
-
 class PrintQueue
 {
 private:
@@ -32,5 +29,4 @@ public:
     bool isEmpty();
     void displayQueue();
 };
-
 #endif

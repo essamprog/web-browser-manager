@@ -1,11 +1,8 @@
 #include "FileManager.h"
 #include <fstream>
 #include <string>
-
 // Martin Nader 7 - File I/O
-
 using namespace std;
-
 void FileManager::saveHistory(const string& url)
 {
     fstream MyFile2;
@@ -16,7 +13,6 @@ void FileManager::saveHistory(const string& url)
         MyFile2.close();
     }
 }
-
 void FileManager::saveBookmark(const string& url)
 {
     ofstream file("bookmarks.txt", ios::app);
@@ -25,13 +21,11 @@ void FileManager::saveBookmark(const string& url)
         file.close();
     }
 }
-
 vector<string> FileManager::loadHistory()
 {
     vector<string> historyList;
     ifstream file("history.txt");
     string url;
-
     if (file.is_open()) {
         while (getline(file, url)) {
             historyList.push_back(url);
@@ -40,13 +34,11 @@ vector<string> FileManager::loadHistory()
     }
     return historyList;
 }
-
 vector<string> FileManager::loadBookmarks()
 {
     vector<string> bookmarkList;
     ifstream file("bookmarks.txt");
     string url;
-
     if (file.is_open()) {
         while (getline(file, url)) {
             bookmarkList.push_back(url);
